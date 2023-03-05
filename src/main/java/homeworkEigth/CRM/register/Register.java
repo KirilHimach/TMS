@@ -8,7 +8,7 @@ public class Register implements Database {
     public Register() {}
 
     @Override
-    public void addDocument(Document document) {
+    public void add(Document document) {
         for (int i = 0; i < documents.length; i++) {
             if (documents[i] == null) {
             documents[i] = document;
@@ -19,7 +19,7 @@ public class Register implements Database {
     }
 
     @Override
-    public void getInfo(int id) {
+    public void get(int id) {
         for (Document i : documents) {
             if (i != null && i.getId() == id) {
                 System.out.println(i);
@@ -30,12 +30,13 @@ public class Register implements Database {
         System.out.println("ID is not found!\n");
     }
 
+    @Override
     public void getAll() {
-        for (Document i : documents) {
-            if (i != null) {
-                System.out.println(i);
-                System.out.println("                    --------------------------------");
+            for (Document i : documents) {
+                if (i != null) {
+                    System.out.println(i);
+                    System.out.println("                    --------------------------------");
+                }
             }
-        }
     }
 }

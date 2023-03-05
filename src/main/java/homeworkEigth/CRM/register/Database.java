@@ -4,7 +4,9 @@ import homeworkEigth.CRM.document.Document;
 
 public interface Database {
 
-    void addDocument(Document document);
+    void add(Document document);
 
-    void getInfo(int id);
+    void get(int id);
+
+    void getAll();
 }
