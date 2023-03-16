@@ -5,8 +5,7 @@ public class MyMain {
         MyArrayList<String> list = new MyArrayList<>();
         list.add("A"); list.add("B"); list.add("C"); list.add("D"); list.add("A"); list.add("B"); list.add("C");
         list.add("D"); list.add("A"); list.add("B"); list.add("C"); list.add("D"); list.add("A"); list.add("B");
-        list.add("C"); list.add("D"); list.add("A"); list.add("B"); list.add("C"); list.add("D"); list.add("A");
-        list.add("B"); list.add("C"); list.add("D");
+
 
         System.out.println(list.getSize());
 
@@ -19,6 +18,10 @@ public class MyMain {
 
         System.out.println("\nremove object");
         list.remove("A");
+        for (int i = 0; i < list.getSize(); i++) {
+            System.out.print(list.get(i) + " ");
+        }
+        System.out.println();
         System.out.println(list.getSize());
 
         System.out.println();

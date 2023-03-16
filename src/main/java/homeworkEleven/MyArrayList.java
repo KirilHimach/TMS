@@ -44,12 +44,13 @@ public class MyArrayList<T> {
         for (int i = 0; i < size; i++) {
             if (o.equals(array[i])) {
                 array[i] = null;
-                size--;
                 int box = i + 1;
                 if (box < size) {
                     for (int j = box; j < size; j++) {
                         array[j - 1] = array[j];
+                        array[j] = null;
                     }
+                    size--;
                     return;
                 }
             }
