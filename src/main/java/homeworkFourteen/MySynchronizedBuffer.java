@@ -17,9 +17,11 @@ public class MySynchronizedBuffer implements Runnable {
             try
             {
                 int i = 0;
-                while (i < 12) {
+                String box;
+                while ((box = reader.readLine()) != null && i < 12) {
                     System.out.println(Thread.currentThread().getName()
-                            + " result = " + reader.readLine() + " - counter = " + counter);
+                            + " result = " + box + " - counter = " + counter
+                            + " - loop counter = " + i);
                     i++;
                 }
                 counter++;
